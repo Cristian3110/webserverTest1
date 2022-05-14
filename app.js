@@ -31,12 +31,12 @@ app.use(express.static('public'));
 
 //?New route with template engines
 //* Mandando argumentos renderizados a la page principal
-app.get('/', (req, res) => {
-	res.render('home', {
-		nombre: 'Cristian Carrillo',
-		titulo: 'Node Course',
-	});
-});
+// app.get('/', (req, res) => {
+// 	res.render('home', {
+// 		nombre: 'Cristian Carrillo',
+// 		titulo: 'Node Course',
+// 	});
+// });
 
 // app.get('/generic', (req, res) => {
 // 	res.sendFile(__dirname + '/public/generic.html');
@@ -44,32 +44,32 @@ app.get('/', (req, res) => {
 
 //* Realizando handlebars con las otras páginas
 
-app.get('/elements', (req, res) => {
-	res.render('elements', {
-		nombre: 'Cristian Carrillo',
-		titulo: 'Node Course',
-	});
-});
+// app.get('/elements', (req, res) => {
+// 	res.render('elements', {
+// 		nombre: 'Cristian Carrillo',
+// 		titulo: 'Node Course',
+// 	});
+// });
 
-app.get('/generic', (req, res) => {
-	res.render('generic', {
-		nombre: 'Cristian Carrillo',
-		titulo: 'Node Course',
-	});
-});
+// app.get('/generic', (req, res) => {
+// 	res.render('generic', {
+// 		nombre: 'Cristian Carrillo',
+// 		titulo: 'Node Course',
+// 	});
+// });
 
 // app.get('/elements', (req, res) => {
 // 	res.sendFile(__dirname + '/public/elements.html');
 // });
 
-app.get('/hola-mundo', (req, res) => {
-	res.send('Hola mundo en su ruta respectiva');
-});
+// app.get('/hola-mundo', (req, res) => {
+// 	res.send('Hola mundo en su ruta respectiva');
+// });
 
 // Cualquier otra ruta que no sea especificada indicar lo siguiente
 //* Si queremos mandar una ruta de algún archivo
 app.get('*', (req, res) => {
-	res.sendFile(__dirname + '/public/before-page/404.html');
+	res.sendFile(__dirname + '/public/index.html');
 });
 
 app.listen(port, () => {
